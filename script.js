@@ -11,8 +11,9 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  alert(`Login realizado com sucesso!\nUsuário: ${usuario}`);
-  form.reset();
+  // Login temporario: qualquer usuário/senha é aceito
+  sessionStorage.setItem('usuarioLogado', usuario);
+  window.location.href = 'painel.html';
 });
 
 linkEsqueci.addEventListener('click', (e) => {

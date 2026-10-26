@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  width: 260px;
+  background-color: #1c1c1c;
+  border-right: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.sidebar-logo img {
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.menu-item:hover { background-color: #2a2a2a; color: #ffffff; }
+.menu-item.active { background-color: #ffffff; color: #000000; font-weight: 600; }
+
+.sidebar-footer {
+  margin-top: 20px;
+  border-top: 1px solid #2e2e2e;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.btn-sair {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-sair:hover { background-color: #3a3a3a; }
+
+/* ---------- CONTEÚDO ---------- */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  padding: 20px 30px;
+  border-bottom: 1px solid #2e2e2e;
+  background-color: #181818;
+}
+.topbar h1 { font-size: 20px; font-weight: 600; color: #ffffff; }
+
+.page-container {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.page { display: none; }
+.page.active { display: block; }
+
+.placeholder {
+  background-color: #1c1c1c;
+  border: 1px dashed #3a3a3a;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  color: #888;
+  font-size: 15px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 768px) {
+  .app { flex-direction: column; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #2e2e2e; }
+  .menu { flex-direction: row; flex-wrap: wrap; }
+  .menu-item { flex: 1 1 auto; text-align: center; }
+}

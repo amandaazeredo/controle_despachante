@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel - Controle Despachante</title>
+  <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="Imagens/logo.png" alt="Logo">
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" data-page="home">🏠 Painel</button>
+        <button class="menu-item" data-page="clientes">👤 Cadastro de Clientes</button>
+        <button class="menu-item" data-page="ordens">📋 Ordens de Serviço</button>
+        <button class="menu-item" data-page="servicos">🛠️ Cadastro de Serviços</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span id="usuarioLogado">Usuário</span>
+        <button id="btnSair" class="btn-sair">Sair</button>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+      <header class="topbar">
+        <h1 id="tituloPagina">Painel</h1>
+      </header>
+
+      <section class="page-container">
+        <!-- HOME (vazio por enquanto) -->
+        <div class="page active" id="page-home">
+          <p class="placeholder">Painel principal em construção.</p>
+        </div>
+
+        <!-- CLIENTES -->
+        <div class="page" id="page-clientes">
+          <p class="placeholder">Módulo de Clientes em construção.</p>
+        </div>
+
+        <!-- ORDENS -->
+        <div class="page" id="page-ordens">
+          <p class="placeholder">Módulo de Ordens de Serviço em construção.</p>
+        </div>
+
+        <!-- SERVIÇOS -->
+        <div class="page" id="page-servicos">
+          <p class="placeholder">Módulo de Serviços em construção.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="painel.js"></script>
+</body>
+</html>
