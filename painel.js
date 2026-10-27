@@ -14,7 +14,11 @@ const titulos = {
   home: 'Painel',
   clientes: 'Cadastro de Clientes',
   ordens: 'Ordens de Serviço',
-  servicos: 'Cadastro de Serviços'
+  servicos: 'Cadastro de Serviços',
+  financeiro: 'Controle Financeiro',
+  agenda: 'Agenda e Prazos',
+  pesquisa: 'Pesquisa e Filtros',
+  relatorios: 'Relatórios'
 };
 
 menuItens.forEach(item => {
